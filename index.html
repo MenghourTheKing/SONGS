@@ -35,3 +35,29 @@
       height: 240px;
     }
   </style>
+</head>
+<body>
+
+  <h1>Hi Welcome To My Site Please Enjoy My Song By MENGHOUR</h1>
+
+  <div id="buttons"></div>
+
+  <video id="videoPlayer" controls></video>
+
+  <script>
+    const videoPlayer = document.getElementById('videoPlayer');
+    const buttonsDiv = document.getElementById('buttons');
+
+    for (let i = 1; i <= 10; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Song ' + i;
+      btn.onclick = () => {
+        videoPlayer.src = `song${i}.mp4`;
+        videoPlayer.play();
+      };
+      buttonsDiv.appendChild(btn);
+    }
+  </script>
+
+</body>
+</html>
